@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>录入图书信息</title>
+</head>
+<body>
+<form action="/models/addBookInfo/" method="post">
+    <p>书名 <input type="text" name="title"></p>
+    <p>作者 1 <input type="text" name="author_1"></p>
+    <p>作者 2<input type="text" name="author_2"></p>
+    <p>价格 <input type="text" name="price"></p>
+    <div>出版社
+        <select name="publisher">
+            <option value="人民出版社">人民出版社</option>
+            <option value="新华出版社">新华出版社</option>
+            <option value="腾讯出版社">腾讯出版社</option>
+            <option value="网易出版社">网易出版社</option>
+        </select>
+    </div>
+    <p><input type="submit" value="提交"></p>
+</form>
+{% if summit_status == 1 %}
+    <p>提交成功！</p>
+{% endif %}
+</body>
+</html>
